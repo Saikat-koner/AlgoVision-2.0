@@ -44,6 +44,9 @@ During this internship, I aimed to bridge theoretical computer science with real
 
 A huge thank you to the entire mentorship team at @LaunchED Global for their guidance and this enriching experience! Special thanks to my HOD [Tag your HOD / Professor Name] and [Your College Name] for their continuous encouragement.
 
+🌐 Live Interactive Platform: https://saikat-koner.github.io/AlgoVision-2.0/
+📦 GitHub Repository: https://github.com/Saikat-koner/AlgoVision-2.0
+
 Check out the full demonstration in the video below! 🎥👇
 
 #LaunchED #DataStructures #Algorithms #SoftwareEngineering #Python #WebDevelopment #ComputerScience #TechInnovation #Coding #CareerJourney #InternshipProject #BTech
