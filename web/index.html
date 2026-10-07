@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlgoVision 2.0 — Unified DSA Analytics & Optimization Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <div class="brand-section">
+      <div class="brand-logo">A2</div>
+      <div class="brand-info">
+        <h1>AlgoVision 2.0 <span class="version-tag">NASSCOM FutureSkills</span></h1>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <select class="scenario-select" id="scenario-selector">
+        <option value="logistics">🚚 Logistics & Supply Chain</option>
+        <option value="ecommerce">🛒 E-Commerce Discovery</option>
+        <option value="fintech">💳 FinTech Fraud & Arbitrage</option>
+      </select>
+      <button class="btn-icon" id="btn-toggle-theme" title="Toggle Light/Dark Mode">☀️</button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <button class="nav-tab-btn active" data-tab="overview">
+        <span>🏛️</span>
+        <span>Overview & Architecture</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="ingestion">
+        <span>📦</span>
+        <span>1. Data Ingestion</span>
+        <span class="tab-badge">Queue / Hash</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="cataloging">
+        <span>📊</span>
+        <span>2. Cataloging</span>
+        <span class="tab-badge">Array / Sort</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="search">
+        <span>🔍</span>
+        <span>3. Search Engine</span>
+        <span class="tab-badge">AVL / Heap</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="optimizer">
+        <span>⚡</span>
+        <span>4. Optimizer</span>
+        <span class="tab-badge">DP / Greedy</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="graphs">
+        <span>🌐</span>
+        <span>5. Network Topology</span>
+        <span class="tab-badge">Graphs</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="benchmarks">
+        <span>🚀</span>
+        <span>Live Benchmarks</span>
+        <span class="tab-badge">O(N) vs O(log N)</span>
+      </button>
+    </aside>
+
+    <!-- Main Dynamic Stage -->
+    <main class="main-stage">
+      <!-- Universal Control Bar -->
+      <section class="control-panel">
+        <div class="controls-group">
+          <button class="btn-primary" id="btn-play">▶ Play</button>
+          <button class="btn-secondary" id="btn-pause">⏸ Pause</button>
+          <button class="btn-secondary" id="btn-step-next">⏭ Step Next</button>
+          <button class="btn-secondary" id="btn-reset">↺ Reset</button>
+        </div>
+
+        <div class="controls-group">
+          <div class="speed-slider-wrap">
+            <span>Speed:</span>
+            <input type="range" id="speed-slider" min="0.25" max="3" step="0.25" value="1">
+            <span id="speed-val-label" style="font-family: var(--font-mono); font-weight: bold; width: 32px;">1x</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stage Grid: Canvas on Left, Telemetry & Code Dossier on Right -->
+      <div class="stage-grid">
+        <!-- Interactive Canvas Stage -->
+        <div class="canvas-card">
+          <div class="card-header">
+            <span class="card-title" id="stage-card-title">Platform Architecture & System Flow</span>
+          </div>
+          <div class="canvas-viewport" id="main-canvas-stage">
+            <!-- Dynamic Visualizer Canvas Injected Here -->
+          </div>
+        </div>
+
+        <!-- Telemetry & Complexity Inspector Panel -->
+        <aside class="inspector-card">
+          <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.05em;">
+            Algorithmic Telemetry HUD
+          </h4>
+
+          <div class="metric-grid">
+            <div class="metric-tile">
+              <div class="metric-label">Key Comparisons</div>
+              <div class="metric-value" id="hud-comparisons">0</div>
+            </div>
+            <div class="metric-tile">
+              <div class="metric-label">Atomic Operations</div>
+              <div class="metric-value" id="hud-operations">0</div>
+            </div>
+            <div class="metric-tile">
+              <div class="metric-label">Time Complexity</div>
+              <div class="metric-value" id="hud-time-complexity" style="font-size: 0.95rem; color: var(--accent-emerald);">O(1)</div>
+            </div>
+            <div class="metric-tile">
+              <div class="metric-label">Space Complexity</div>
+              <div class="metric-value" id="hud-space-complexity" style="font-size: 0.95rem; color: var(--accent-purple);">O(N)</div>
+            </div>
+          </div>
+
+          <h5 style="font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); margin-top: 0.5rem;">
+            Step-by-Step Execution Log
+          </h5>
+          <div class="step-log-box" id="hud-step-logs">
+            <div class="log-entry highlight">System initialized. Ready for algorithmic simulation.</div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/data-samples.js"></script>
+  <script src="js/visualizers/queue-hash-visualizer.js"></script>
+  <script src="js/visualizers/array-sort-visualizer.js"></script>
+  <script src="js/visualizers/tree-heap-visualizer.js"></script>
+  <script src="js/visualizers/optimizer-visualizer.js"></script>
+  <script src="js/visualizers/graph-visualizer.js"></script>
+  <script src="js/benchmark-suite.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
