@@ -14,11 +14,11 @@
 
 ### 🎙️ Word-for-Word Introduction Script:
 
-> **"Hello everyone! My name is [Your Full Name], and I am currently pursuing my [B.Tech / B.E. / MCA / B.Sc] in [Computer Science and Engineering / Information Technology] from [Your College / University Name]. I am currently in my [3rd Year / 4th Year / Final Year] of study.**
+> **"Hello everyone! My name is Saikat Koner, and I am currently pursuing my B.Tech in Computer Science and Engineering.
 >
-> **I have completed my internship journey with LaunchED in the [Data Structures & Algorithms / Full Stack Development / Software Engineering] domain. It has been an incredible learning experience where I gained deep exposure to corporate-grade coding standards, algorithmic problem-solving, and scalable system design.**
+> I have completed my internship journey with LaunchED in the Data Structures & Algorithms and Software Engineering domain. It has been an incredible learning experience where I gained deep exposure to corporate-grade coding standards, algorithmic problem-solving, and scalable system design.
 >
-> **In this video, I will be demonstrating my Capstone Major Project titled ‘AlgoVision 2.0 — A Unified Analytics & Optimization Platform’ that integrates core Data Structures and Algorithms to solve real-world challenges across logistics, e-commerce, and fintech sectors."**
+> In this video, I will be demonstrating my Capstone Major Project titled ‘AlgoVision 2.0 — A Unified Analytics & Optimization Platform’ that integrates core Data Structures and Algorithms to solve real-world challenges across logistics, e-commerce, and fintech sectors."**
 
 ---
 

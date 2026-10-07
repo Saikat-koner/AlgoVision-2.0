@@ -75,11 +75,11 @@ My internship journey with LaunchED Global was a truly transformative learning e
 ## 📂 Step 3: Google Drive Folder Structure
 
 Create a new folder in your Google Drive named:  
-`AlgoVision_2.0_Capstone_Submission_[Your_Name]`
+`AlgoVision_2.0_Capstone_Submission_Saikat_Koner`
 
 ### Folder Contents:
 ```
-AlgoVision_2.0_Capstone_Submission_[Your_Name]/
+AlgoVision_2.0_Capstone_Submission_Saikat_Koner/
 ├── 1_Source_Code/
 │   ├── src/
 │   ├── tests/
@@ -90,7 +90,7 @@ AlgoVision_2.0_Capstone_Submission_[Your_Name]/
 │   ├── PROJECT_DOCUMENTATION.md
 │   └── VIDEO_DEMO_SCRIPT.md
 ├── 3_Demonstration_Video/
-│   └── AlgoVision_2.0_Demo_Video_[Your_Name].mp4
+│   └── AlgoVision_2.0_Demo_Video_Saikat_Koner.mp4
 └── 4_Review_Screenshot/
     └── LaunchED_Google_Review_Screenshot.png
 ```

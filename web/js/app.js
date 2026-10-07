@@ -1,12 +1,13 @@
 /**
  * Main Application Controller for AlgoVision 2.0
+ * Handcrafted by Saikat Koner • B.Tech CSE • LaunchED Global Internship Capstone
  */
 
 document.addEventListener("DOMContentLoaded", () => {
   // Global App State
   const state = {
     currentTab: "overview",
-    theme: "dark",
+    theme: "light",
     speed: 1,
     activeVisualizer: null
   };
@@ -42,9 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Theme Toggler
   const themeBtn = document.getElementById("btn-toggle-theme");
   themeBtn.addEventListener("click", () => {
-    state.theme = state.theme === "dark" ? "light" : "dark";
+    state.theme = state.theme === "light" ? "dark" : "light";
     document.documentElement.setAttribute("data-theme", state.theme);
-    themeBtn.textContent = state.theme === "dark" ? "☀️" : "🌙";
+    themeBtn.textContent = state.theme === "light" ? "🌙" : "☀️";
   });
 
   // Speed Slider
@@ -99,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     switch (tabId) {
       case "overview":
-        stageTitle.textContent = "Platform Architecture & System Flow";
+        stageTitle.textContent = "Platform Architecture & Engineering Dossier";
         renderOverviewStage();
         state.activeVisualizer = null;
         break;
@@ -137,37 +138,74 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderOverviewStage() {
     canvasStage.innerHTML = `
       <div style="display: flex; flex-direction: column; gap: 1.25rem; width: 100%;">
-        <div style="background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem;">
-          <h3 style="font-size: 1.1rem; color: var(--accent-cyan); margin-bottom: 0.5rem;">
-            AlgoVision 2.0 — Multi-Sector Algorithmic Analytics Platform
-          </h3>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
-            A unified engineering system integrating <strong>5 Core DSA Pillars</strong> to solve high-impact optimization challenges across
-            <strong>Supply Chain Logistics</strong> (routing & cargo density), <strong>E-Commerce</strong> (sub-millisecond cataloging & Top-K stream indexing),
-            and <strong>FinTech</strong> (O(1) idempotency, circular money-laundering detection & FX arbitrage).
-          </p>
+        <!-- Hero Banner Card -->
+        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 50%, #f5f3ff 100%); border: 1.5px solid #bae6fd; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(2, 132, 199, 0.08);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span style="font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #0369a1; background: #ffffff; padding: 3px 10px; border-radius: 9999px; border: 1px solid #bae6fd; display: inline-block; margin-bottom: 0.5rem;">
+                Capstone Major Submission • NASSCOM FutureSkills
+              </span>
+              <h3 style="font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-bottom: 0.4rem; letter-spacing: -0.02em;">
+                AlgoVision 2.0 — Multi-Sector Algorithmic Analytics Platform
+              </h3>
+              <p style="font-size: 0.88rem; color: #334155; line-height: 1.6; max-width: 680px;">
+                Designed & engineered from first principles by <strong>Saikat Koner</strong>. Integrates <strong>5 Fundamental DSA Pillars</strong> across
+                <strong>Supply Chain Logistics</strong>, <strong>High-Density E-Commerce</strong>, and <strong>FinTech Fraud & Arbitrage Engines</strong>.
+              </p>
+            </div>
+            <div style="background: #ffffff; padding: 1rem; border-radius: 12px; border: 1px solid #cbd5e1; text-align: right; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <div style="font-size: 0.7rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Lead Developer</div>
+              <div style="font-size: 1rem; font-weight: 800; color: #0f172a;">Saikat Koner</div>
+              <div style="font-size: 0.75rem; color: #0284c7; font-weight: 700;">B.Tech CSE (Hons.)</div>
+            </div>
+          </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
-          <div style="background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1rem;">
-            <div style="font-size: 1.2rem; margin-bottom: 0.35rem;">📦 <strong>Module 1: Ingestion</strong></div>
-            <p style="font-size: 0.75rem; color: var(--text-secondary);">Thread-safe Circular FIFO Queue + Separate Chaining Hash Tables with O(1) deduplication.</p>
+        <!-- 5 Interactive Module Cards Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+          <div onclick="document.querySelector('[data-tab=ingestion]').click()" style="background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 1.15rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.03);" onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#0284c7'" onmouseout="this.style.transform='none'; this.style.borderColor='#e2e8f0'">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span style="font-size: 1.4rem;">📦</span>
+              <span style="font-size: 0.65rem; font-weight: 800; font-family: var(--font-mono); color: #0284c7; background: #e0f2fe; padding: 2px 6px; border-radius: 4px;">O(1) Ingest</span>
+            </div>
+            <h4 style="font-size: 0.95rem; font-weight: 800; color: #0f172a; margin-bottom: 0.25rem;">1. Data Ingestion</h4>
+            <p style="font-size: 0.78rem; color: #475569; line-height: 1.5;">Thread-safe Circular FIFO Queue + Separate Chaining Hash Tables with dynamic rehashing (α ≥ 0.75).</p>
           </div>
-          <div style="background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1rem;">
-            <div style="font-size: 1.2rem; margin-bottom: 0.35rem;">📊 <strong>Module 2: Cataloging</strong></div>
-            <p style="font-size: 0.75rem; color: var(--text-secondary);">Contiguous Dynamic Arrays + Yaroslavskiy Dual-Pivot QuickSort with 3-Way Radix partitioning.</p>
+
+          <div onclick="document.querySelector('[data-tab=cataloging]').click()" style="background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 1.15rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.03);" onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#059669'" onmouseout="this.style.transform='none'; this.style.borderColor='#e2e8f0'">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span style="font-size: 1.4rem;">📊</span>
+              <span style="font-size: 0.65rem; font-weight: 800; font-family: var(--font-mono); color: #059669; background: #dcfce7; padding: 2px 6px; border-radius: 4px;">O(N log N)</span>
+            </div>
+            <h4 style="font-size: 0.95rem; font-weight: 800; color: #0f172a; margin-bottom: 0.25rem;">2. Cataloging Engine</h4>
+            <p style="font-size: 0.78rem; color: #475569; line-height: 1.5;">Contiguous Dynamic Array + Yaroslavskiy Dual-Pivot QuickSort with 3-Way Radix partitioning.</p>
           </div>
-          <div style="background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1rem;">
-            <div style="font-size: 1.2rem; margin-bottom: 0.35rem;">🔍 <strong>Module 3: Search Engine</strong></div>
-            <p style="font-size: 0.75rem; color: var(--text-secondary);">Self-Balancing AVL Trees with LL/RR/LR/RL rotations + Streaming Top-K Min/Max Heaps.</p>
+
+          <div onclick="document.querySelector('[data-tab=search]').click()" style="background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 1.15rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.03);" onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#7c3aed'" onmouseout="this.style.transform='none'; this.style.borderColor='#e2e8f0'">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span style="font-size: 1.4rem;">🔍</span>
+              <span style="font-size: 0.65rem; font-weight: 800; font-family: var(--font-mono); color: #7c3aed; background: #f3e8ff; padding: 2px 6px; border-radius: 4px;">O(log N)</span>
+            </div>
+            <h4 style="font-size: 0.95rem; font-weight: 800; color: #0f172a; margin-bottom: 0.25rem;">3. Search Engine</h4>
+            <p style="font-size: 0.78rem; color: #475569; line-height: 1.5;">Self-Balancing AVL Trees with LL/RR/LR/RL rotation visualizer + Streaming Top-K Min/Max Heaps.</p>
           </div>
-          <div style="background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1rem;">
-            <div style="font-size: 1.2rem; margin-bottom: 0.35rem;">⚡ <strong>Module 4: Optimizer</strong></div>
-            <p style="font-size: 0.75rem; color: var(--text-secondary);">Greedy Fractional Knapsack & Activity Scheduler + 2D Matrix DP (0/1 Knapsack, LCS, Floyd-Warshall).</p>
+
+          <div onclick="document.querySelector('[data-tab=optimizer]').click()" style="background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 1.15rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.03);" onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#d97706'" onmouseout="this.style.transform='none'; this.style.borderColor='#e2e8f0'">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span style="font-size: 1.4rem;">⚡</span>
+              <span style="font-size: 0.65rem; font-weight: 800; font-family: var(--font-mono); color: #d97706; background: #fef3c7; padding: 2px 6px; border-radius: 4px;">O(N·W) DP</span>
+            </div>
+            <h4 style="font-size: 0.95rem; font-weight: 800; color: #0f172a; margin-bottom: 0.25rem;">4. Optimization Core</h4>
+            <p style="font-size: 0.78rem; color: #475569; line-height: 1.5;">Greedy Fractional Knapsack & Activity Scheduler + 2D Matrix DP table with backtrack path solver.</p>
           </div>
-          <div style="background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1rem;">
-            <div style="font-size: 1.2rem; margin-bottom: 0.35rem;">🌐 <strong>Module 5: Topology</strong></div>
-            <p style="font-size: 0.75rem; color: var(--text-secondary);">Adjacency List/Matrix Graphs + Dijkstra SSSP, Kruskal MST (DSU), and Tarjan SCC Fraud Rings.</p>
+
+          <div onclick="document.querySelector('[data-tab=graphs]').click()" style="background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 1.15rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.03);" onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#e11d48'" onmouseout="this.style.transform='none'; this.style.borderColor='#e2e8f0'">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span style="font-size: 1.4rem;">🌐</span>
+              <span style="font-size: 0.65rem; font-weight: 800; font-family: var(--font-mono); color: #e11d48; background: #ffe4e6; padding: 2px 6px; border-radius: 4px;">O(V+E) Graph</span>
+            </div>
+            <h4 style="font-size: 0.95rem; font-weight: 800; color: #0f172a; margin-bottom: 0.25rem;">5. Network Topology</h4>
+            <p style="font-size: 0.78rem; color: #475569; line-height: 1.5;">Adjacency Graphs + Dijkstra SSSP, Kruskal MST (Disjoint Set Union), and Tarjan SCC Fraud Rings.</p>
           </div>
         </div>
       </div>

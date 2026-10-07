@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AlgoVision 2.0 — Unified DSA Analytics & Optimization Platform</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -15,7 +15,11 @@
     <div class="brand-section">
       <div class="brand-logo">A2</div>
       <div class="brand-info">
-        <h1>AlgoVision 2.0 <span class="version-tag">NASSCOM FutureSkills</span></h1>
+        <h1>
+          AlgoVision 2.0
+          <span class="author-chip">Saikat Koner • B.Tech CSE</span>
+          <span class="version-tag">NASSCOM FutureSkills</span>
+        </h1>
       </div>
     </div>
 
@@ -25,7 +29,7 @@
         <option value="ecommerce">🛒 E-Commerce Discovery</option>
         <option value="fintech">💳 FinTech Fraud & Arbitrage</option>
       </select>
-      <button class="btn-icon" id="btn-toggle-theme" title="Toggle Light/Dark Mode">☀️</button>
+      <button class="btn-icon" id="btn-toggle-theme" title="Toggle Light/Dark Mode">🌙</button>
     </div>
   </header>
 
@@ -74,7 +78,7 @@
       <!-- Universal Control Bar -->
       <section class="control-panel">
         <div class="controls-group">
-          <button class="btn-primary" id="btn-play">▶ Play</button>
+          <button class="btn-primary" id="btn-play">▶ Play Step</button>
           <button class="btn-secondary" id="btn-pause">⏸ Pause</button>
           <button class="btn-secondary" id="btn-step-next">⏭ Step Next</button>
           <button class="btn-secondary" id="btn-reset">↺ Reset</button>
@@ -103,8 +107,8 @@
 
         <!-- Telemetry & Complexity Inspector Panel -->
         <aside class="inspector-card">
-          <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.05em;">
-            Algorithmic Telemetry HUD
+          <h4 style="font-size: 0.88rem; font-weight: 800; color: var(--accent-blue); text-transform: uppercase; letter-spacing: 0.05em; display: flex; items-center; gap: 0.5rem;">
+            <span>⚡</span> Algorithmic Telemetry HUD
           </h4>
 
           <div class="metric-grid">
@@ -118,15 +122,15 @@
             </div>
             <div class="metric-tile">
               <div class="metric-label">Time Complexity</div>
-              <div class="metric-value" id="hud-time-complexity" style="font-size: 0.95rem; color: var(--accent-emerald);">O(1)</div>
+              <div class="metric-value" id="hud-time-complexity" style="font-size: 1rem; color: var(--accent-emerald);">O(1)</div>
             </div>
             <div class="metric-tile">
               <div class="metric-label">Space Complexity</div>
-              <div class="metric-value" id="hud-space-complexity" style="font-size: 0.95rem; color: var(--accent-purple);">O(N)</div>
+              <div class="metric-value" id="hud-space-complexity" style="font-size: 1rem; color: var(--accent-purple);">O(N)</div>
             </div>
           </div>
 
-          <h5 style="font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); margin-top: 0.5rem;">
+          <h5 style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); margin-top: 0.5rem;">
             Step-by-Step Execution Log
           </h5>
           <div class="step-log-box" id="hud-step-logs">

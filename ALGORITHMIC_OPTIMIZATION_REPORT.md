@@ -1,6 +1,6 @@
 # Algorithmic Complexity & Optimization Report — AlgoVision 2.0
 
-**Author:** Intern / Student Engineer  
+**Author:** Saikat Koner (B.Tech CSE, Lead Developer)  
 **Project:** AlgoVision 2.0 — Unified DSA Analytics & Optimization Platform  
 **Alignment:** NASSCOM FutureSkills Framework & Industry Mentorship Benchmarks (Amazon, Microsoft, TCS)  
 **Evaluation Criteria:** Concept Coverage (25%), Code Quality (25%), Practical Relevance (25%), Presentation & Reflection (25%)  
